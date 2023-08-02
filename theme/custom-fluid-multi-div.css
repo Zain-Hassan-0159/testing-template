@@ -1,0 +1,120 @@
+/* Styles that are common between all "optional" containers, can be changed in one place */
+div#header-custom-2,
+div#custom-footer {
+    display: block;
+    min-height: 40px;
+    margin: 5px 0 5px 0;
+
+    content: "";
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div#header-custom-2{
+    height: 250px;
+}
+
+/* 
+   Since the application is responsive by design, the styling changes at various breakpoints (browser widths).  The
+   following @media queries update the css in each container for the device requesting the orderform.  This improves
+   performance by only having a device request the image sizes it needs, and allows for font sizes to vary according
+   to the screen size.
+*/
+@media screen and (min-width: 1200px) {
+    /* Initial text size for the custom content in the header */
+    div#header-custom-2 {
+        background-image: url(img/header-995x250.png);
+    }
+
+    div#custom-footer {
+        background-image: url(img/footer-965x1000.jpeg);
+        height: 1000px;
+
+    }
+
+}
+
+@media screen and (max-width: 1199px) {
+    div#header-custom-2 {
+        background-image: url(img/header-940x250.png);
+    }
+
+    div#custom-footer {
+        background-image: url(img/footer-910x1000.jpeg);
+        height: 1000px;
+
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    div#header-custom-2 {
+        background-image: url(img/header-720x250.png);
+    }
+
+    div#custom-footer {
+        background-image: url(img/footer-690x800.jpeg);
+        height: 800px;
+
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    div#header-custom-2 {
+        background-image: url(img/header-740x250.png);
+    }
+
+    div#custom-footer {
+        background-image: url(img/footer-705x800.jpeg);
+        height: 800px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    div#header-custom-2 {
+        background-image: url(img/header-400x240.png);
+        height: 205px;
+        background-size: contain;
+    }
+
+    div#custom-footer {
+        background-image: url(img/footer-400x477.jpeg);
+        height: 477px;
+        background-size: contain;
+    }
+
+}
+
+.digital-only {
+    margin-left: 0 !important;
+}
+input[type="checkbox"]:before {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 .25em 0 0;
+
+    font: 16px/1em sans-serif;
+
+    content: "";
+    vertical-align: top;
+}
+input[type="checkbox"]:checked :before {
+    content: "";
+    text-align: center;
+
+    color: #333;
+    background: blue;
+}
+input[type="checkbox"]:checked :after {
+    font-weight: bold;
+}
+
+body{
+    background-color: #AB6204;
+}
