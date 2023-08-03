@@ -46,6 +46,12 @@ div#custom-footer {
 
 @media screen and (max-width: 1199px) {
 
+    div#header-custom-2 {
+        background-image: url(img/header-995x400.jpeg);
+        background-size: contain;
+        height: 400px;
+    }
+
     div#custom-footer {
         background-image: url(img/footer-910x1000.jpeg);
         height: 1000px;
