@@ -3,7 +3,7 @@ div#header-custom-2,
 div#custom-footer {
     display: block;
     min-height: 40px;
-    margin: 5px 0 5px 0;
+    margin: 0;
 
     content: "";
 
@@ -12,8 +12,14 @@ div#custom-footer {
     background-size: cover;
 }
 
-div#header-custom-2{
-    height: 250px;
+#productImage{
+    max-height: 300px!important;   
+    width: 100%;
+    object-fit: contain;
+}
+
+.payButton button{
+    background-color: #BA5D17;
 }
 
 /* 
@@ -25,7 +31,9 @@ div#header-custom-2{
 @media screen and (min-width: 1200px) {
     /* Initial text size for the custom content in the header */
     div#header-custom-2 {
-        background-image: url(img/header-995x250.png);
+        background-image: url(img/header-995x400.jpeg);
+        background-size: contain;
+        height: 400px;
     }
 
     div#custom-footer {
@@ -37,9 +45,6 @@ div#header-custom-2{
 }
 
 @media screen and (max-width: 1199px) {
-    div#header-custom-2 {
-        background-image: url(img/header-940x250.png);
-    }
 
     div#custom-footer {
         background-image: url(img/footer-910x1000.jpeg);
@@ -50,9 +55,7 @@ div#header-custom-2{
 }
 
 @media screen and (max-width: 991px) {
-    div#header-custom-2 {
-        background-image: url(img/header-720x250.png);
-    }
+
 
     div#custom-footer {
         background-image: url(img/footer-690x800.jpeg);
@@ -64,7 +67,9 @@ div#header-custom-2{
 
 @media screen and (max-width: 767px) {
     div#header-custom-2 {
-        background-image: url(img/header-740x250.png);
+        background-image: url(img/header-720x250.jpeg);
+        background-size: contain;
+        height: 250px;
     }
 
     div#custom-footer {
@@ -76,15 +81,19 @@ div#header-custom-2{
 
 @media screen and (max-width: 500px) {
     div#header-custom-2 {
-        background-image: url(img/header-400x240.png);
-        height: 205px;
+        background-image: url(img/header-400x170.jpeg);
         background-size: contain;
+        height: 170px;
     }
 
     div#custom-footer {
         background-image: url(img/footer-400x477.jpeg);
         height: 477px;
         background-size: contain;
+    }
+
+    #productImage{
+        max-height: 205px!important;   
     }
 
 }
@@ -116,5 +125,5 @@ input[type="checkbox"]:checked :after {
 }
 
 body{
-    background-color: #AB6204;
+    background-color: white;
 }
